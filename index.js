@@ -39,16 +39,9 @@ function factorial(num){
     for(let i = 1; i <= num; i++){
         result *= i;
     }
-    // check if the number is prime
-    if(primeNumber()){
-        numberResult.innerHTML = `Factorial: ${result}`;
-    }
-    else{
-        numberResult.innerHTML = ``;
-    }
-   
+    // display the result of the factorial
+    numberResult.innerHTML = `Factorial: ${result}`;
     
-
 }
 // this function is for displaying the result of the prime number and the factorial of the input number
 submitBtn.addEventListener('click',(event)=>{
@@ -56,7 +49,7 @@ submitBtn.addEventListener('click',(event)=>{
 
    try{
     // check if the input is not a number
-    if(isNaN(input.value)){
+    if(isNaN(input.value) || input.value <= 0){
         error.innerHTML = "Invalid Input"
     }
     // check if the input is empty
