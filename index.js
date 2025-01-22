@@ -27,11 +27,7 @@ function primeNumber(){
     }
 }
 
-/**
- * Calculates the factorial of a given number and updates the inner HTML of an element with id 'numberResult'.
- * 
- * @param {number} num - The number to calculate the factorial of.
- */
+// Calculates the factorial of a given number and updates the inner HTML of an element with id 'numberResult'.
 
 function factorial(num){
     let result = 1;
