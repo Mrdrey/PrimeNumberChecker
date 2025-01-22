@@ -20,6 +20,7 @@ function primeNumber(){
     
     if(input.value % 2 == 0){
         textResult.innerHTML = "Not a Prime Number"
+        
     }
     else{
         textResult.innerHTML = "Prime Number"
@@ -35,13 +36,19 @@ function primeNumber(){
 function factorial(num){
     let result = 1;
     // loop through the number and get the factorial
-    for(let i = 1;i<num; i++){
-      
-        result*= num;
-        
+    for(let i = 1; i <= num; i++){
+        result *= i;
     }
-    // display the result of the factorial
-    numberResult.innerHTML = result
+    // check if the number is prime
+    if(primeNumber()){
+        numberResult.innerHTML = `Factorial: ${result}`;
+    }
+    else{
+        numberResult.innerHTML = ``;
+    }
+   
+    
+
 }
 // this function is for displaying the result of the prime number and the factorial of the input number
 submitBtn.addEventListener('click',(event)=>{
